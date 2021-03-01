@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+#topbar {
+    width: 100%;
+    height: 77px;
+
+    box-shadow: 0 2px 4px #ccc;
+    background-color: white;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 50px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#logo {
+    width: 40px;
+}
+
+.menu-item {
+    font-size: 14px;
+    font-weight: 600;
+    margin-right: 24px;
+}
+
+.btn-primary {
+    background-color: rgb(170, 210, 54);
+    border: 0;
+    color: #fff;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 9px 34px;
+}
+
+
+#landing-section {
+    width: 100%;
+    height: 100vh;
+    background-color: lightblue;
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url('https://edyoda.s3.ap-south-1.amazonaws.com/public/landing-background.png');
+    background-size: cover;
+    background-position: left;
+
+    text-align: center;
+}
+
+.align-center {
+    display: flex;
+    align-items: center;
+}
+
+#sidebar-toggle {
+    display: none;
+    font-size: 24px;
+    margin-right: 16px;
+}
+
+#sidebar {
+    width: 270px;
+    height: 100vh;
+    background-color: lightslategray;
+    position: fixed;
+    transform: translateX(-100%);
+
+    transition-property: all;
+    transition-duration: 3s;
+}
+
+@media (max-width: 400px) {
+    .menu-item {
+        display: none;
+    }
+
+    html {
+        font-size: 8px;
+    }
+
+    #sidebar-toggle {
+        display: inline-flex;
+    }
+}
